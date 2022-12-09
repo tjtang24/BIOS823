@@ -1,6 +1,6 @@
 Model,Accuracy
 1-Conv CNN,0.775
-3-Conv CNN,0.853
-5-Conv CNN,0.84
+3-Conv CNN,0.864
+5-Conv CNN,0.882
 RF,0.825
 SVM,0.792
