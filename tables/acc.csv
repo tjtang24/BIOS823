@@ -1,4 +1,4 @@
-Model,TestAccuracy,ValAccuracy
+Model,Test Accuracy,Val Accuracy
 1-Conv CNN,0.775,0.763
 3-Conv CNN,0.864,0.86
 5-Conv CNN,0.882,0.86
