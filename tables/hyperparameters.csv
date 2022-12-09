@@ -1,0 +1,5 @@
+Algorithm,Hyperparameters,Range,Best,Description
+RF,max\_depth,2; 5; 10; 100,100,Maximum depth of the tree
+RF,n\_estimators,100; 1000,1000,Number of trees
+SVM,C,0.1; 1; 10,10,Regularization parameter
+SVM,kernel,linear; rbf,rbf,Kernel type
