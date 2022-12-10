@@ -1,7 +1,7 @@
 # BIOS823_final
 
 ## Dependencies
-
+```
 matplotlib          3.5.2
 numpy               1.21.5
 pandas              1.4.4
@@ -17,7 +17,7 @@ jupyterlab          3.4.4
 notebook            6.4.12
 -----
 Python 3.9.13 
------
+```
 
 ## Reproduce results
 
