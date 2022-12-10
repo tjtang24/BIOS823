@@ -134,7 +134,7 @@
 
 \begin{abstract}
 
-In this project, I implement and compare the support vector machine, random forest, and three convolutional neural network architectures to classify textures in colorectal cancer histology. The results demonstrate that convolutional neural networks outperform the other two methods with higher classification accuracy for the image classification task. 
+In this project, I implemented and compared the support vector machine, random forest, and three convolutional neural network architectures to classify textures in colorectal cancer histology. The results demonstrate that convolutional neural networks outperform the other two methods with higher classification accuracy for the image classification task. 
 
 \end{abstract}
 
@@ -151,7 +151,7 @@ The data set for this project is \texttt{colorectal\_histology} \cite{kather2016
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.9\columnwidth]{figures/intro.png} 
-\caption{Visualization of sample images and corresponding labels}
+\caption{Sample images and corresponding labels in the data set}
 \label{fig1}
 \end{figure}
 
@@ -197,29 +197,26 @@ I trained the model in 500 epochs for all three CNN architectures, and early sto
         {\Algorithm & \Hyperparameters & \Range & \Best & \Description}%
         \bottomrule
     \end{tabular}}
-\caption{Hyperparameters tuning for random forest and support vector machine and hyperparameters for the final model}
+\caption{Hyperparameters tuning for random forest and support vector machine and hyperparameters for the final models}
 \label{hp}
 \end{table}
 
 \section{Results}
 
-Machine learning and deep learning methods can suffer from overfitting problems. In particular, a model can perform exceptionally well on a training set but poorly on external data sets. I performed hyperparameter tuning for RF and SVM to mitigate model overfitting. Specifically, I shuffled the whole data set and split it into training (60\%), validation (20\%), and test (20\%) sets and then considered grid search to find the optimal combinations of hyperparameters that produce the best validation accuracy for RF and SVM. The validation set is used during the CNN training process to monitor the model's sparse categorical crossentropy validation loss at each epoch. Additionally, I added ``dropout'' to each CNN, a regularization technique that randomly ignores each hidden unit with a probability of 0.5, to avoid overfitting \cite{hinton2012improving}. 
-
-
+Machine learning and deep learning methods can suffer from overfitting issues. In particular, a model can perform exceptionally well on a training set but poorly on external data sets. I performed hyperparameter tuning for RF and SVM to mitigate model overfitting. Specifically, I shuffled the whole data set and split it into training (60\%), validation (20\%), and test (20\%) sets and then considered grid search to find the optimal combinations of hyperparameters that produced the best validation accuracy for RF and SVM. The validation set was used during the CNN training process to monitor the model's sparse categorical crossentropy validation loss at each epoch. Additionally, I added ``dropout'' to each CNN, a regularization technique that randomly ignores each hidden unit with a probability of 0.5, to avoid overfitting \cite{hinton2012improving}. 
 
 Table~\ref{hp} shows the hyperparameter tuning and hyperparameters for the final model. For RF, the number of trees in the forest is 1,000, and the maximum depth of the tree is 100. The RBF kernel is used for the SVM, and the regularization parameter is 10. Figure~\ref{fig2} shows the training and validation loss curves for all three CNN architectures. We can see that the 3 Conv layers and 5 Conv layers CNN have the lowest validation loss at the end. Even though there are still overfitting issues, it is acceptable to use the 3 Conv layers and 5 Conv layers CNN architectures for classifications.
-
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.9\columnwidth]{figures/cnn.png} 
-\caption{Loss curve for three convolutional neural network architectures}
+\caption{Loss curves for the three convolutional neural network architectures}
 \label{fig2}
 \end{figure}
 
 The evaluation is performed on the test set. Table~\ref{tab2} reports the classification accuracy across all five proposed methods. From this, we can conclude that the 3 Conv layers and 5 Conv layers CNN has the best accuracy on the test set, and the 5 Conv layers CNN is slightly much better. The 1 Conv layer CNN has the worst performance and is worse than RF the SVM. 
 
-Figure~\ref{cm} is the confusion matrix, which shows the classification performance for the best 5 Conv layers CNN model. It illustrates that the classification is very accurate across most of the classes. We can find that the model may misclassify stroma, debris, and complex tissue types. From Figure~\ref{fig1}, one of the reasons is probably because these tissues have similar colors and structures.
+Figure~\ref{cm} is the confusion matrix, which shows the classification performance for the best 5 Conv layers CNN model. It illustrates that the classification is very accurate across most of the classes. We can find that the model may misclassify stroma, debris, and complex tissue types. From Figure~\ref{fig1}, one of the reasons is probably because these tissues have similar colors and patterns.
 
 \begin{table}[t]
 \centering
@@ -241,13 +238,13 @@ Figure~\ref{cm} is the confusion matrix, which shows the classification performa
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.9\columnwidth]{figures/confusion_matrix.png} 
-\caption{Confusion matrix for the five convolutional layers convolutional neural network}
+\caption{Confusion matrix for the best five convolutional layers convolutional neural network}
 \label{cm}
 \end{figure}
 
 \section{Discussion and Conclusion}
 
-In conclusion, among all CNN architectures, the 3 Conv layers and  5 Conv layers model has the best accuracy on the test sets. These two deep learning CNN performs better than the two machine learning methods (SVM and RF) in this image classification task. The 1 Conv layer CNN has the worst performance, which is because the model is too simple to learn the data set. Due to the limited computing power, I did not perform an exhaustive grid search and cross-validation parameters tuning for SVM and RF, and I did not perform fine-tuning for the three CNN architectures. Future studies could explore much deeper and different CNN architectures. We may also consider other useful techniques, including data augmentation and autoencoder. 
+In conclusion, among all CNN architectures, the 3 Conv layers and  5 Conv layers model has the best classification accuracy on the test sets. These two deep learning CNN architectures perform better than the two machine learning methods (SVM and RF) in this image classification task. The 1 Conv layer CNN has the worst performance, which is because the model is too simple to learn the data set well. Due to the limited computing power, I did not perform an exhaustive grid search and cross-validation parameters tuning for SVM and RF, and I did not perform fine-tuning for the three CNN architectures. Future studies could explore much deeper and different CNN architectures. We may also consider other useful techniques, including data augmentation and autoencoder. 
 
 
 
