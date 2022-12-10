@@ -1,4 +1,4 @@
-# BIOS823 Final Project
+# Fall 2022 BIOS823 Final Project
 
 ## Overview
 
@@ -12,16 +12,18 @@ pip install -r requirements.txt
 
 ## Usage
 
-- Run `BIOS823_Final.ipynb`, which contains all the codes to generate all necessary files and results for the report.
-- Run `Report.tex`, which generates `Report.pdf` as the report for this project.
+The final report `Report.pdf` is fully reproducible from the Jupyter Notebook and LaTeX document by following the below steps:
+
+- Create a `tables/` folder for `.csv` tables to be included in the report
+- Create a `figure/` folder for `.png` figures to be included in the report
+- Run `BIOS823_Final.ipynb`, which contains all necessary codes to generate results, tables, and figures for the report. The tables will be saved in the `tables/` folder, and the figures will be saved in the `figures/` folder. (`BIOS823_Final.pdf` is the pdf output for the Jupyter Notebook.)
+- Compile `Report.tex`, which generates `Report.pdf` as the main report for this project.
 
 ## Other files
 
-- `figure/` contains `.png` figures to be included in the report
-- `tables/` contains `.csv` tables to be included in the report
-- `aaai23.bib` contains the bibliography in BibTeX
-- `aaai23.sty` LaTeX style
-- `aaai23.bst` bibliography style  
+- `aaai23.bib`: bibliography in BibTeX
+- `aaai23.sty`: LaTeX style
+- `aaai23.bst`: bibliography style  
 Note: The LaTeX template is from https://www.aaai.org/Publications/Templates/AuthorKit23.zip.
 
 
