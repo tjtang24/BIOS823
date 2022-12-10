@@ -21,7 +21,7 @@ pip install -r requirements.txt
 - `tables/` contains `.csv` tables to be included in the report
 - `aaai23.bib` contains the bibliography in BibTeX
 - `aaai23.sty` LaTeX style
-- `aaai23.bst` bibliography style
+- `aaai23.bst` bibliography style  
 Note: The LaTeX template is from https://www.aaai.org/Publications/Templates/AuthorKit23.zip.
 
 
