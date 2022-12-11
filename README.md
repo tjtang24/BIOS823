@@ -16,7 +16,7 @@ The final report `Report.pdf` is fully reproducible from the Jupyter Notebook an
 
 - Create a `tables/` folder for `.csv` tables to be included in the report
 - Create a `figure/` folder for `.png` figures to be included in the report
-- Run `BIOS823_Final.ipynb`, which contains all necessary codes to generate results, tables, and figures for the report. The tables will be saved in the `tables/` folder, and the figures will be saved in the `figures/` folder. (`BIOS823_Final.pdf` is the pdf output for the Jupyter Notebook.)
+- Run `BIOS823_Final.ipynb`, which contains all necessary codes to generate results, tables, and figures for the report. The tables will be saved in the `tables/` folder, and the figures will be saved in the `figures/` folder.
 - Compile `Report.tex`, which generates `Report.pdf` as the main report for this project.
 
 ## Other files
