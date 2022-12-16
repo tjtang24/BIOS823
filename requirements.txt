@@ -1,8 +1,9 @@
 matplotlib==3.5.2
-numpy==1.21.5
+numpy==1.21.6
 pandas==1.4.4
 scikit-learn==1.0.2
-tensorflow==2.10.0
+tensorflow==2.9.2
+tensorflow-determinism
 tensorflow_datasets==4.7.0
 IPython==7.31.1
 jupyter_client==7.3.4

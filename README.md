@@ -6,13 +6,15 @@ This is the repository for the Duke BIOS 823 Final Project (by TJ Tang). The top
 
 ## Dependencies (Python 3)
 
+The `requirements.txt` file contains the Python packages dependencies for running the codes. The packages can be installed by running the following command:
+
 ```
 pip install -r requirements.txt
 ```
 
 ## Usage
 
-The final report `Report.pdf` is fully reproducible from the Jupyter Notebook and LaTeX document by following the below steps:
+The final report `Report.pdf` can be reproduced from the Jupyter Notebook and LaTeX document by following the below steps:
 
 - Create a `tables/` folder for `.csv` tables to be included in the report
 - Create a `figure/` folder for `.png` figures to be included in the report
